@@ -1,0 +1,28 @@
+$sub-color: grey;
+$main-color: black;
+
+@mixin shrinkLabel {
+  top: -1.4rem;
+  font-size: 1.2rem;
+  color: $main-color;
+}
+
+.sign-in {
+  width: 30vh;
+  display: flex;
+  flex-direction: column;
+  color: $main-color;
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  span {
+    font-size: 2rem;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+}

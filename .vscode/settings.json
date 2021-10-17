@@ -1,0 +1,19 @@
+{
+  "workbench.colorTheme": "Atom One Dark",
+  "oneDarkPro.editorTheme": "ayu",
+  "semanticHighlighting": true,
+  "editor.tokenColorCustomizations": {
+      "[One Dark Pro]": {
+        "semanticHighlighting": true,
+        "textMateRules": [
+            {
+                "name": "js object key",
+                "scope": "meta.object-literal.key",
+                "settings": {
+                    "foreground": "#56b6c2"
+                }
+            }
+        ]
+      }
+  }
+}

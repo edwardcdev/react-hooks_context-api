@@ -1,0 +1,217 @@
+@import '../../stylesheets/main.scss';
+
+.splash {
+  height: 100vh;
+  width: 100vw;
+  padding: 10px 20px;
+
+  @media screen and (max-width: 800px) {
+    padding: 0 0;
+  }
+
+  .header {
+    height: 95%;
+    position: relative;
+    background-image: linear-gradient(to right bottom, rgba(225, 225, 225, 0.6), rgba(62, 63, 62, 0.8)), url("../../images/background-1.jpg");
+    background-size: cover;
+    background-size: 100% 100%;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    opacity: 0.85;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 800px) {
+      height: 50%;
+    }
+
+    .logo-box {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      .logo-image {
+        width: 125px;
+        height: 125px;
+
+        @media screen and (max-width: 800px) {
+          width: 90px;
+          height: 90px;
+        }
+      }
+    }
+
+    .text-box {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+
+      @media screen and (max-width: 800px) {
+        top: 45%;
+      }
+    }
+  }
+
+  .about {
+    background-color: $color-grey-light-1;
+    padding: 15rem 0;
+    margin-top: -18vh;
+    height: 100%;
+
+    > div {
+      @media screen and (max-width: 800px) {
+        padding: 10px;
+      }
+    }
+
+    @media screen and (max-width: 800px) {
+      height: 90%;
+    }
+
+    .about-header {
+      margin-bottom: 8rem;
+      text-align: center;
+      @media screen and (max-width: 800px) {
+        margin-bottom: 1rem;
+      }
+    }
+    
+
+    .composition {
+      position: relative;
+
+      .street-photo {
+        position: absolute;
+        width: 45%;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+        border-radius: 2px;
+        z-index: 10;
+        transition: all .2s;
+        outline-offset: 1rem;
+
+        @media screen and (max-width: 800px) {
+          width: 25%;
+        }
+
+        &:hover {
+          outline: 2.5px solid $color-black;
+          border-radius: 8px;
+          transform: scale(1.05) translateY(-.5rem);
+          box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
+          z-index: 20;
+        }
+
+        // @media screen and (max-width: 800px) {
+        //   float: left;
+        //   position: relative;
+        // }
+      }
+
+      .p1 {
+        left: 0;
+        top: -6rem;
+
+        @media screen and (max-width: 800px) {
+          left: 4rem;
+          top: 2rem;
+        }
+      }
+
+      .p2 {
+        right: 8rem;
+        top: -2rem;
+
+        @media screen and (max-width: 800px) {
+          right: 6.5rem;
+          top: 2rem;
+        }
+      }
+
+      .p3 {
+        left: 8rem;
+        top: 5em;
+        @media screen and (max-width: 800px) {
+          left: 14rem;
+          top: 5rem;
+        }
+      }
+
+    }
+  }
+
+  .main-2 {
+    height: 110%;
+    width: 100%;
+    background-image: url("../../images/background-4.jpg");
+    clip-path: polygon(0 25vh, 100% 5%, 100% 100%, 0 100%);
+    background-size: cover;
+    opacity: 0.85;
+    margin-top: -25vh;
+    display: flex;
+    justify-content: space-evenly;
+
+    @media screen and (max-width: 800px) {
+      height: 70%;
+      overflow: hidden;
+      // display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      clip-path: polygon(0 25vh, 100% 15%, 100% 100%, 0 100%);
+    }
+
+    > div {
+      @media screen and (max-width: 800px) {
+        height: 75px;
+        width: 75px;
+      }
+    }
+
+
+    .feature-box {
+      width: 225px;
+      background-color: rgba(255, 255, 255, 0.9);
+      font-size: 1.5rem;
+      padding: 2.5rem;
+      text-align: center;
+      border-radius: 3px;
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+      transition: transform .3s;
+      margin-top: 49.5rem;
+
+      @media screen and (max-width: 800px) {
+        width: 150px;
+        display: none;
+        flex-direction: column;
+        height: 90px;
+        overflow: hidden;
+      }
+
+    
+      .icon {
+        font-size: 6rem;
+        display: inline-block;
+        background-image: linear-gradient(to right, rgba(74, 74, 74, 0.6), rgba(0, 0, 0, 0.8));
+        -webkit-background-clip: text;
+        color: transparent;
+
+        @media screen and (max-width: 800px) {
+          font-size: 3rem;
+        }
+      }
+
+      .feature-box-text {
+        font-size: 12px;
+
+        @media screen and (max-width: 800px) {
+          font-size: 8px;
+        }
+      }
+
+      &:hover {
+        transform: translateY(-1.5rem) scale(1.03);
+      }
+    }
+  }
+}
